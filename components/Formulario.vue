@@ -89,7 +89,7 @@ export default {
                 axios ({
       method: "post",
       url: "http://localhost:8080/flights/",
-      data: this.form.JSON,
+      data: JSON.stringify(this.form),
       headers: {"Content-Type": "application/json"  },}).then(function (response){
           console.log(response);
       }).catch(function (response){
