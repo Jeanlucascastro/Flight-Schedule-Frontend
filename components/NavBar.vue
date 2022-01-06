@@ -2,7 +2,7 @@
 
 <div>
   <b-navbar toggleable="lg" type="light" variant="light">
-    <b-navbar-brand NuxtLink to="/Body" href="#">Flight Schedule</b-navbar-brand>
+    <b-navbar-brand NuxtLink to="/" href="#">Flight Schedule</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -29,9 +29,9 @@
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>
-            <em>User</em>
+            <em>Usuario</em>
           </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item to="/efetuarLogin" href="#">Login</b-dropdown-item>
           <b-dropdown-item href="#">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>

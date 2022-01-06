@@ -1,9 +1,10 @@
 <template>
 <div>
+  
   <NavBar/>
   <Body/>
   <Footer/>
-    
+
     </div>
 
 </template>
@@ -14,6 +15,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   // name: 'IndexPage',
-  layout: 'Body',
+  layout: 'index',
 })
 </script>

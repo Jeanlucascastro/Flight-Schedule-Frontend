@@ -1,5 +1,5 @@
 <template>
-
+<div lass="mx-auto" style="width: 500px;">
 
 <v-footer
 color="primary loghten-1"
@@ -30,7 +30,7 @@ cols="12"
 </v-col>
 </v-row> 
 </v-footer>
-
+</div>
 </template>
 
 <script>

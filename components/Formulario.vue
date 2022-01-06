@@ -1,6 +1,6 @@
 <template>
 <div>
-<div class="container">
+<div class="container mt-5" style="width: 500px;">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group
         id="input-group-1"
@@ -51,11 +51,6 @@
       <pre class="m-0">{{ form }}</pre>
     </b-card>
     </div>
-
-
-
-
-    
   </div>
 
 
@@ -73,44 +68,48 @@ export default {
     data() {
       return {
         form: {
-          nome: '',
-          initd: '',
-          finald: '',
+          nome: 'Joao',
+          initd: 'PEdro',
+          finald: 'Jose',
           fli: 2332,
         },
         foods: [{ text: 'Selecione um', value: null }, '2323', 'King Air ', 'Phanon', 'Seneca'],
         show: true
       }
     },
+
+
+
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert(JSON.stringify(this.form))
-                axios ({
+      const enviar = this.form
+
+      axios ({
       method: "post",
       url: "http://localhost:8080/flights/",
-      data: JSON.stringify(this.form),
+      data: enviar,
       headers: {"Content-Type": "application/json"  },}).then(function (response){
           console.log(response);
       }).catch(function (response){
           console.log(response);
       });
-        //dataSend = (JSON.stringify(this.form))
-      },
+
+},
 
       onReset(event) {
         event.preventDefault()
         // Reset our form values
-        this.form.nome = ''
-        this.form.initd = ''
-         this.form.finald = ''
-        this.form.fli = null
+        this.form.nome = 'Jean '
+        this.form.initd = '10 '
+         this.form.finald = '10'
+        this.form.fli = 2332
         
 
         // Trick to reset/clear native browser form validation state
-        this.show = false
+        this.show = true
         this.$nextTick(() => {
-          this.show = false
+          this.show = true
         })
       }
     }
