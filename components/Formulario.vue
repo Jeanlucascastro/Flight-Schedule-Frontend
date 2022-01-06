@@ -6,7 +6,7 @@
         id="input-group-1"
         label="Nome:"
         label-for="input-1"
-        description="Nome do aluno"
+        description=""
       >
         <b-form-input
           id="input-1"
@@ -68,9 +68,9 @@ export default {
     data() {
       return {
         form: {
-          nome: 'Joao',
-          initd: 'PEdro',
-          finald: 'Jose',
+          nome: '',
+          initd: '',
+          finald: '',
           fli: 2332,
         },
         foods: [{ text: 'Selecione um', value: null }, '2323', 'King Air ', 'Phanon', 'Seneca'],
@@ -100,9 +100,9 @@ export default {
       onReset(event) {
         event.preventDefault()
         // Reset our form values
-        this.form.nome = 'Jean '
-        this.form.initd = '10 '
-         this.form.finald = '10'
+        this.form.nome = ' '
+        this.form.initd = ' '
+         this.form.finald = ''
         this.form.fli = 2332
         
 

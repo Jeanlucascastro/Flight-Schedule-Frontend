@@ -1,5 +1,5 @@
 <template>
-<div lass="mx-auto" style="width: 500px;">
+<div class="mx-auto" style="width: 100px;">
 
 <v-footer
 color="primary loghten-1"
